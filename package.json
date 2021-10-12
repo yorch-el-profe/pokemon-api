@@ -1,0 +1,18 @@
+{
+  "name": "pokemon-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jorge Ramón <jorge.ramon2128@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+}
