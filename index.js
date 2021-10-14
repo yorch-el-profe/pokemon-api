@@ -29,11 +29,13 @@ app.get("/pokemon/:id", async function (request, response) {
   const { id } = request.params;
   const { data } = await axios.get(`${API}/pokemon/${id}`);
   response.json({
-    number: data.id,
-    name: data.name,
-    types: data.types.map((t) => t.type.name),
-    artwork: data.sprites.other["official-artwork"].front_default,
-    sprite: data.sprites.front_default,
+    data: {
+      number: data.id,
+      name: data.name,
+      types: data.types.map((t) => t.type.name),
+      artwork: data.sprites.other["official-artwork"].front_default,
+      sprite: data.sprites.front_default,
+    },
   });
 });
 
